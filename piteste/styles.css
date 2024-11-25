@@ -1,0 +1,330 @@
+/* Estilos globais para todos os elementos */
+body * {
+  font-size: 1em;
+  color: #ffffff;
+  font-family: Impact, fantasy;
+}
+
+body {
+  background-image: url('fundo2.jpg');
+  background-size: cover; /* Garantir que o fundo cubra toda a tela */
+  background-position: center;
+}
+
+.studio-info {
+  background-color: #ff3131; /* Cor de fundo para elementos com a classe studio-info */
+}
+
+
+/* dessa para baixo só treeta de formulario*/
+
+.paraforms {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para o botão */
+button {
+  background-color: #FF0000;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0; /* Remover bordas arredondadas */
+}
+
+/* Estilo para o formulário */
+.logcliente {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  max-height: 80vh;
+  display: grid; /* Ativa o grid */
+  grid-template-columns: 1fr 3fr; /* Define duas colunas */
+  grid-template-areas: 
+    "tcliente tcliente"
+    "labmail email"
+    "labsenha senha"
+    "lablembrar lembrar-me"
+    "butao butao"
+    "futcliente futcliente";
+  border-radius: 0; /* Remover bordas arredondadas do formulário */
+}
+
+.logtatuador {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  max-height: 80vh;
+  display: grid; /* Ativa o grid */
+  grid-template-columns: 1fr 3fr; /* Define duas colunas */
+  grid-template-areas: 
+    "ttatuador ttatuador"
+    "labmail email"
+    "labsenha senha"
+    "lablembrar lembrar-me"
+    "butao butao"
+    "futtatuador futtatuador";
+  border-radius: 0; /* Remover bordas arredondadas do formulário */
+}
+
+.logcliente {
+  grid-gap: 10px; /* Espaço entre os itens do grid */
+  align-items: center;
+}
+
+/* Estilo dos campos dentro do formulário (input, textarea e button) */
+form input,
+form textarea,
+form button {
+  width: 80%; /* Faz os campos ocuparem toda a largura da célula do grid */
+  padding: 12px; /* Aumenta o padding para dar mais espaço interno */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0; /* Remover bordas arredondadas */
+  justify-self: center;
+}
+
+/* Ajuste específico para a cor de fundo do input */
+form input {
+  color: black; /* Cor do texto no campo */
+  background-color: white; /* Fundo branco para os campos */
+}
+
+/* Estilo para o botão ao passar o mouse */
+form button:hover {
+  background-color: #ffffff;
+  color: #FF0000;
+}
+
+/* Estilo para os rótulos (labels) */
+form label {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Estilo para o checkbox (lembrar-me) */
+form input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* Estilo do título do formulário */
+.tcliente {
+  font-size: 1.5rem;
+  text-align: center;
+  grid-column: span 2; /* Faz o título ocupar as duas colunas */
+}
+
+.ttatuador {
+  font-size: 1.5rem;
+  text-align: center;
+  grid-column: span 2; /* Faz o título ocupar as duas colunas */
+}
+
+/* Estilo para o parágrafo de "não tem conta" */
+.futcliente  {
+  text-align: center;
+  grid-column: span 2;
+}
+
+.futtatuador  {
+  text-align: center;
+  grid-column: span 2;
+}
+
+/*fim estilização formularios*/
+
+/* Estilos globais para o formulário */
+.form-cadastro {
+  background-color: black; /* Cor de fundo preta para o formulário */
+  color: white; /* Cor do texto em branco */
+  padding: 40px; /* Espaçamento interno do formulário */
+  width: 60%; /* Largura fixa do formulário */
+  max-width: 400px; /* Limite máximo da largura */
+  height: auto; /* A altura vai se ajustar ao conteúdo */
+  max-height: 80vh; /* A altura máxima do formulário será 80% da altura da tela */
+  display: grid; /* Usando Grid Layout */
+  grid-template-columns: 1fr 3fr; /* Define duas colunas, sendo a primeira menor */
+  grid-template-areas: 
+    "titulo titulo"
+    "label-nome input-nome"
+    "label-email input-email"
+    "label-senha input-senha"
+    "label-telefone input-telefone"
+    "label-data-nascimento input-data-nascimento"
+    "label-foto input-foto"
+    "botao botao"
+    "futcliente futcliente";
+  border-radius: 0; /* Remover bordas arredondadas */
+  
+}
+
+/* Estilo do título */
+.titulo-cadastro {
+  grid-area: titulo;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos rótulos */
+label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: white ;
+  text-align: center;
+}
+
+/* Estilo dos campos de entrada */
+.input-nome,
+.input-email,
+.input-senha,
+.input-telefone,
+.input-data-nascimento,
+.input-foto {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0; /* Remover bordas arredondadas */
+  background-color: #fff; /* Cor de fundo branca para os inputs */
+  color: black; /* Cor do texto nos campos de entrada */
+  text-align: center;
+}
+
+/* Estilo do botão */
+.botao-cadastro {
+  grid-area: botao;
+  background-color: #FF0000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.botao-cadastro:hover {
+  background-color: #ffffff;
+  color:#cc0000;
+}
+
+/* Estilo do link (para o "não tem conta" no final do formulário) */
+.futcliente {
+  grid-area: futcliente;
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.futcliente a {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+.futcliente a:hover {
+  text-decoration: underline;
+}
+
+
+/* elementos do index abaixo
+
+/* Estilo geral para o corpo da página */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: white;
+}
+
+/* Grid Layout para a seção */
+section {
+  display: grid;
+  grid-template-columns: 1fr; /* Coluna única para o layout */
+  grid-template-rows: auto 1fr; /* O primeiro item (nav) tem altura automática e o carrossel ocupa o resto */
+  height: 100vh; /* A seção ocupa toda a altura da tela */
+}
+
+/* Estilo para o menu de navegação */
+.central-nav {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 20px; /* Espaçamento entre os botões */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+.nav-btn {
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Estilo do carrossel */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2 / 3; /* Faz o carrossel ocupar a segunda linha do grid */
+  position: relative;
+  width: 90%; /* O carrossel ocupa 90% da largura da seção */
+  max-width: 1200px;
+  height: 500px; /* Define uma altura fixa para o carrossel */
+  overflow: hidden; /* Esconde as imagens que saem do contêiner */
+  margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+}
+
+.carousel {
+  display: flex; /* Organiza as imagens do carrossel horizontalmente */
+  transition: transform 0.5s ease; /* Animação suave para o movimento das imagens */
+}
+
+.carousel-img {
+  width: 100%; /* Faz com que as imagens ocupem 100% da largura do container */
+  height: 100%; /* Faz com que as imagens ocupem 100% da altura do container */
+  object-fit: cover; /* Faz com que as imagens cubram toda a área do container sem distorcer */
+}
+
+/* Estilo para os botões de navegação do carrossel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
